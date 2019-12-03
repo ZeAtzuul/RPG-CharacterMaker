@@ -4,7 +4,7 @@ const idParam = 'id';
 
 class RoutePaths{
   static final characters = RoutePath(path: 'characters');
-  static final dashboard = RoutePath(path: 'dashboard');
+  static final search = RoutePath(path: 'search');
   static final character = RoutePath(path: '${characters.path}/:$idParam');
 }
 

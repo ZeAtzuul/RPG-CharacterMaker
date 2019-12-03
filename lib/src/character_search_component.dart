@@ -12,7 +12,7 @@ import 'character.dart';
   selector: 'character-search',
   templateUrl: 'character_search_component.html',
   styleUrls: ['character_search_component.css'],
-  directives: [coreDirectives],
+  directives: [coreDirectives, routerDirectives],
   providers: [ClassProvider(CharacterSearch)],
   pipes: [commonPipes],
 )

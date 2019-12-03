@@ -9,7 +9,8 @@ import 'src/character.dart';
 
 class InMemoryDataService extends MockClient {
   static final _initialCharacters = [
-    {'id': 1, 'name': 'Hellion'},
+    {'id': 1, 'STR': 20,  'DEX': 20, 'CON': 20, 'INT': 20,
+      'WIS': 20, 'CHA': 20, 'name': 'Hellion'},
   ];
   static List<Character> _charactersDb;
   static int _nextId;
@@ -32,7 +33,14 @@ class InMemoryDataService extends MockClient {
         break;
       case 'POST':
         var name = json.decode(request.body)['name'];
-        var newCharacter = Character(_nextId++, name);
+        var STR = json.decode(request.body)['STR'];
+        var DEX = json.decode(request.body)['DEX'];
+        var CON = json.decode(request.body)['CON'];
+        var INT = json.decode(request.body)['INT'];
+        var WIS = json.decode(request.body)['WIS'];
+        var CHA = json.decode(request.body)['CHA'];
+        var newCharacter = Character(_nextId++, STR, DEX, CON,
+            INT, WIS, CHA, name);
         _charactersDb.add(newCharacter);
         data = newCharacter;
         break;
@@ -59,6 +67,7 @@ class InMemoryDataService extends MockClient {
     _nextId = _charactersDb.map((character) =>
     character.id).fold(0, max) + 1;
   }
+
   static String lookUpName(int id) =>
       _charactersDb.firstWhere((character) =>
       character.id == id, orElse: null)?.name;

@@ -10,8 +10,8 @@ import 'src/CharService.dart';
     <nav>
     <a [routerLink]="RoutePaths.characters.toUrl()"
        [routerLinkActive]="'active'">Characters</a>
-    <a [routerLink]="RoutePaths.dashboard.toUrl()"
-       [routerLinkActive]="'active'">Dashboard</a>
+    <a [routerLink]="RoutePaths.search.toUrl()"
+       [routerLinkActive]="'active'">Search</a>
     </nav>
     <router-outlet [routes] = "Routes.all"></router-outlet>
   ''',
@@ -21,6 +21,4 @@ import 'src/CharService.dart';
   exports: [RoutePaths, Routes],
 )
 
-class AppComponent{
-  final title = 'RPG Character Creator';
-}
+class AppComponent{}

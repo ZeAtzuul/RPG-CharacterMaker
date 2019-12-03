@@ -1,6 +1,6 @@
 label {
     display: inline-block;
-    width: 3em;
+    width: 7em;
     margin: .5em 0;
     color: #607D8B;
     font-weight: bold;
@@ -10,6 +10,7 @@ input {
     font-size: 1em;
     padding-left: .4em;
 }
+
 button {
     margin-top: 20px;
     font-family: Arial;
@@ -19,9 +20,11 @@ button {
     border-radius: 4px;
     cursor: pointer; cursor: hand;
 }
+
 button:hover {
     background-color: #cfd8dc;
 }
+
 button:disabled {
     background-color: #eee;
     color: #ccc;

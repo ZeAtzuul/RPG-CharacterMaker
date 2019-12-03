@@ -32,5 +32,6 @@ class CharComponent implements OnActivate {
     await _charService.update(character);
     goBack();
   }
+
   void goBack() => _location.back();
 }
