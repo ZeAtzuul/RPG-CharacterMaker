@@ -1,0 +1,21 @@
+<h2>Characters</h2>
+<div>
+    <label>Character Name:</label> <input #characterName />
+    <button (click) = "add(characterName.value); characterName.value = ''">
+        Add
+    </button>
+</div>
+
+<ul class = "characters">
+    <li *ngFor = "let character of characters"
+        [class.selected]="character === selected"
+        (click) = "onSelect(character)">
+        <span class="badge">{{character.id}}</span>
+        <span>{{character.name}}</span>
+        <button class = "delete"
+                (click) = "delete(character); $event.stopPropagation()">x</button>
+    </li>
+</ul>
+<div *ngIf = "selected != null">
+    <button (click) = "gotoDetail()">View Details</button>
+</div>

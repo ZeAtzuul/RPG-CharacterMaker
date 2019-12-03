@@ -1,0 +1,10 @@
+<div *ngIf = "character != null">
+    <h2>{{character.name}}</h2>
+    <div><label>ID: </label>{{character.id}}</div>
+    <div>
+        <label>Name: </label>
+        <input [(ngModel)]="character.name" placeholder="Name">
+    </div>
+    <button (click) = "goBack()">Back</button>
+    <button (click) = "save()">Save Character</button>
+</div>
