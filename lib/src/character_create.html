@@ -1,0 +1,15 @@
+<h3>Create Character</h3>
+<div>
+    <div><label>Character Name:</label> <input #characterName /></div>
+    <div><label>Strength Score:</label> <input #characterSTR /></div>
+    <div><label>Dexterity Score:</label> <input #characterDEX /></div>
+    <div><label>Constitution Score:</label> <input #characterCON /></div>
+    <div><label>Intelligence Score:</label> <input #characterINT /></div>
+    <div><label>Wisdom Score:</label> <input #characterWIS /></div>
+    <div><label>Charisma Score:</label> <input #characterCHA /></div>
+
+    <button (click) = "add(characterName.value, characterSTR.value, characterDEX.value,
+    characterCON.value, characterINT.value, characterWIS.value, characterCHA.value);">
+        Save Character
+    </button>
+</div>

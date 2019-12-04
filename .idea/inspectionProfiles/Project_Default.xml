@@ -4,7 +4,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="11">
+          <list size="17">
             <item index="0" class="java.lang.String" itemvalue="*ngfor" />
             <item index="1" class="java.lang.String" itemvalue="[(ngmodel)]" />
             <item index="2" class="java.lang.String" itemvalue="(click)" />
@@ -16,6 +16,12 @@
             <item index="8" class="java.lang.String" itemvalue="(change)" />
             <item index="9" class="java.lang.String" itemvalue="(keyup)" />
             <item index="10" class="java.lang.String" itemvalue="#charactername" />
+            <item index="11" class="java.lang.String" itemvalue="#characterint" />
+            <item index="12" class="java.lang.String" itemvalue="#charactercon" />
+            <item index="13" class="java.lang.String" itemvalue="#characterdex" />
+            <item index="14" class="java.lang.String" itemvalue="#characterstr" />
+            <item index="15" class="java.lang.String" itemvalue="#charactercha" />
+            <item index="16" class="java.lang.String" itemvalue="#characterwis" />
           </list>
         </value>
       </option>

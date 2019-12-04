@@ -9,19 +9,20 @@ import 'CharService.dart';
 import 'Route_paths.dart';
 
 @Component(
-  selector: 'my-character',
-  templateUrl: 'character_component.html',
-  styleUrls: ['character_component.css'],
-  directives: [coreDirectives, formDirectives],
+  selector: 'character-create',
+  templateUrl: 'character_create.html',
+  styleUrls: ['Char_List_component.css'],
+  directives: [coreDirectives],
 )
 
-class CharComponent implements OnActivate {
+class CharacterCreate implements OnActivate{
   Character character;
   final CharService _charService;
   final Location _location;
   Character selected;
+  List<Character> characters;
 
-  CharComponent(this._charService, this._location);
+  CharacterCreate(this._charService, this._location);
 
   @override
   void onActivate(_, RouterState current) async {
@@ -32,6 +33,15 @@ class CharComponent implements OnActivate {
   Future<void> save() async {
     await _charService.update(character);
     goBack();
+  }
+
+  Future<void> add(String name, int STR, int DEX, int CON,
+      int INT, int WIS, int CHA) async {
+    name = name.trim();
+    if(name.isEmpty) return null;
+    characters.add(await _charService.create(name, STR, DEX, CON,
+        INT, WIS, CHA));
+    selected = null;
   }
 
   void goBack() => _location.back();

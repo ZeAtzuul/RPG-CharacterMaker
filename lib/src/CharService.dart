@@ -40,7 +40,8 @@ class CharService{
     }
   }
 
-  Future<Character> create(String name) async {
+  Future<Character> create(String name, int STR, int DEX, int CON,
+      int INT, int WIS, int CHA) async {
     try{
       final response = await _http.post(_characterUrl,
           headers: _headers, body: json.encode({'name': name}));

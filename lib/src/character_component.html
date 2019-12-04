@@ -1,9 +1,5 @@
 <div *ngIf = "character != null">
     <h2>{{character.name}}</h2>
-    <div>
-        <label>Name: </label>
-        <input [(ngModel)]="character.name" placeholder="Name">
-    </div>
     <div><label>Strength: </label>{{character.STR}}</div>
     <div><label>Dexterity: </label>{{character.DEX}}</div>
     <div><label>Constitution: </label>{{character.CON}}</div>
@@ -11,5 +7,5 @@
     <div><label>Wisdom: </label>{{character.WIS}}</div>
     <div><label>Charisma: </label>{{character.CHA}}</div>
     <button (click) = "goBack()">Back</button>
-    <button (click) = "save()">Save Character</button>
+    <button (click) = "save()">Edit Character</button>
 </div>

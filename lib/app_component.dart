@@ -10,8 +10,12 @@ import 'src/CharService.dart';
     <nav>
     <a [routerLink]="RoutePaths.characters.toUrl()"
        [routerLinkActive]="'active'">Characters</a>
+       
     <a [routerLink]="RoutePaths.search.toUrl()"
        [routerLinkActive]="'active'">Search</a>
+       
+    <a [routerLink]="RoutePaths.ccreate.toUrl()"
+       [routerLinkActive]="'active'">Create Character</a>
     </nav>
     <router-outlet [routes] = "Routes.all"></router-outlet>
   ''',

@@ -6,6 +6,7 @@ class RoutePaths{
   static final characters = RoutePath(path: 'characters');
   static final search = RoutePath(path: 'search');
   static final character = RoutePath(path: '${characters.path}/:$idParam');
+  static final ccreate = RoutePath(path: 'create');
 }
 
 int getId(Map<String, String> parameters) {
