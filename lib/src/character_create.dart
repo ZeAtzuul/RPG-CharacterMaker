@@ -11,8 +11,8 @@ import 'Route_paths.dart';
 @Component(
   selector: 'character-create',
   templateUrl: 'character_create.html',
-  styleUrls: ['Char_List_component.css'],
-  directives: [coreDirectives],
+  styleUrls: ['character_create.css'],
+  directives: [coreDirectives, formDirectives],
 )
 
 class CharacterCreate implements OnActivate{

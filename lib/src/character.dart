@@ -1,5 +1,5 @@
 class Character {
-  final int id, STR, DEX, CON, INT, WIS, CHA;
+  int id, STR, DEX, CON, INT, WIS, CHA;
   String name;
 
   Character(this.id, this.STR, this.DEX, this.CON, this.INT,

@@ -16,10 +16,11 @@ import 'CharService.dart';
 )
 
 class CharListComponent implements OnInit{
+
   final CharService _charService;
   final Router _router;
-  List<Character> characters;
   Character selected;
+  List<Character> characters;
 
   CharListComponent(this._charService, this._router);
 

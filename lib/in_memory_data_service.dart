@@ -9,8 +9,20 @@ import 'src/character.dart';
 
 class InMemoryDataService extends MockClient {
   static final _initialCharacters = [
-    {'id': 1, 'STR': 20,  'DEX': 20, 'CON': 20, 'INT': 20,
-      'WIS': 20, 'CHA': 20, 'name': 'Hellion'},
+    {'id': 1, 'STR': 8,  'DEX': 16, 'CON': 16, 'INT': 20,
+      'WIS': 12, 'CHA': 14, 'name': 'Szaaka'},
+
+    {'id': 1, 'STR': 8,  'DEX': 14, 'CON': 15, 'INT': 20,
+      'WIS': 14, 'CHA': 20, 'name': 'Talius'},
+
+    {'id': 1, 'STR': 6,  'DEX': 20, 'CON': 14, 'INT': 8,
+      'WIS': 14, 'CHA': 15, 'name': 'Kogmarde'},
+
+    {'id': 1, 'STR': 20,  'DEX': 16, 'CON': 20, 'INT': 8,
+      'WIS': 14, 'CHA': 8, 'name': 'Kor'},
+
+    {'id': 1, 'STR': 8,  'DEX': 18, 'CON': 16, 'INT': 16,
+      'WIS': 8, 'CHA': 20, 'name': 'Clyde'},
   ];
   static List<Character> _charactersDb;
   static int _nextId;
