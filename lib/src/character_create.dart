@@ -35,13 +35,17 @@ class CharacterCreate implements OnActivate{
     goBack();
   }
 
-  Future<void> add(String name, int STR, int DEX, int CON,
+  Future<void> add(String name, cclass, int STR, int DEX, int CON,
       int INT, int WIS, int CHA) async {
     name = name.trim();
     if(name.isEmpty) return null;
-    characters.add(await _charService.create(name, STR, DEX, CON,
+    characters.add(await _charService.create(name, cclass, STR, DEX, CON,
         INT, WIS, CHA));
     selected = null;
+  }
+
+  convertInt(){
+
   }
 
   void goBack() => _location.back();

@@ -28,11 +28,11 @@ class CharListComponent implements OnInit{
     characters = await _charService.getAll();
   }
 
-  Future<void> add(String name, int STR, int DEX, int CON,
+  Future<void> add(String name, String cclass, int STR, int DEX, int CON,
       int INT, int WIS, int CHA) async {
     name = name.trim();
     if(name.isEmpty) return null;
-    characters.add(await _charService.create(name, STR, DEX, CON,
+    characters.add(await _charService.create(name, cclass, STR, DEX, CON,
         INT, WIS, CHA));
     selected = null;
   }

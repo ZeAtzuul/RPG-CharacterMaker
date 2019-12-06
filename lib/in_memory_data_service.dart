@@ -10,19 +10,19 @@ import 'src/character.dart';
 class InMemoryDataService extends MockClient {
   static final _initialCharacters = [
     {'id': 1, 'STR': 8,  'DEX': 16, 'CON': 16, 'INT': 20,
-      'WIS': 12, 'CHA': 14, 'name': 'Szaaka'},
+      'WIS': 12, 'CHA': 14, 'name': 'Szaaka', 'class':'Wizard'},
 
-    {'id': 1, 'STR': 8,  'DEX': 14, 'CON': 15, 'INT': 20,
-      'WIS': 14, 'CHA': 20, 'name': 'Talius'},
+    {'id': 2, 'STR': 8,  'DEX': 14, 'CON': 15, 'INT': 20,
+      'WIS': 14, 'CHA': 20, 'name': 'Talius', 'class':'Warlock'},
 
-    {'id': 1, 'STR': 6,  'DEX': 20, 'CON': 14, 'INT': 8,
-      'WIS': 14, 'CHA': 15, 'name': 'Kogmarde'},
+    {'id': 3, 'STR': 6,  'DEX': 20, 'CON': 14, 'INT': 8,
+      'WIS': 14, 'CHA': 15, 'name': 'Kogmarde', 'class':'Rogue'},
 
-    {'id': 1, 'STR': 20,  'DEX': 16, 'CON': 20, 'INT': 8,
-      'WIS': 14, 'CHA': 8, 'name': 'Kor'},
+    {'id': 4, 'STR': 20,  'DEX': 16, 'CON': 20, 'INT': 8,
+      'WIS': 14, 'CHA': 8, 'name': 'Kor', 'class':'Barbarian'},
 
-    {'id': 1, 'STR': 8,  'DEX': 18, 'CON': 16, 'INT': 16,
-      'WIS': 8, 'CHA': 20, 'name': 'Clyde'},
+    {'id': 5, 'STR': 8,  'DEX': 18, 'CON': 16, 'INT': 16,
+      'WIS': 8, 'CHA': 20, 'name': 'Clyde', 'class':'Sorcerer'},
   ];
   static List<Character> _charactersDb;
   static int _nextId;
@@ -45,6 +45,7 @@ class InMemoryDataService extends MockClient {
         break;
       case 'POST':
         var name = json.decode(request.body)['name'];
+        var cclass = json.decode(request.body)['class'];
         var STR = json.decode(request.body)['STR'];
         var DEX = json.decode(request.body)['DEX'];
         var CON = json.decode(request.body)['CON'];
@@ -52,7 +53,7 @@ class InMemoryDataService extends MockClient {
         var WIS = json.decode(request.body)['WIS'];
         var CHA = json.decode(request.body)['CHA'];
         var newCharacter = Character(_nextId++, STR, DEX, CON,
-            INT, WIS, CHA, name);
+            INT, WIS, CHA, name, cclass);
         _charactersDb.add(newCharacter);
         data = newCharacter;
         break;
